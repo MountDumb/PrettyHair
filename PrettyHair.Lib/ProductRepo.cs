@@ -47,6 +47,19 @@ namespace PrettyHair.Lib
         {
             _productCol.Remove(_productCol.Find(x => x.ProductId == id));
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
         #endregion
     }
 }
