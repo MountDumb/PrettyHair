@@ -28,6 +28,23 @@ namespace PrettyHair.Test
 
         }
 
+        [Test]
+        public void CanUpdateProductsInProductRepo()
+        {
+            Product updatedprod;
+            Assert.AreEqual("Pen", prepo.GetProductById(1).Description);
+            Assert.AreEqual(3.89m, prepo.GetProductById(1).Price);
+
+            updatedprod = new Product(1, 2.22m, "updated");
+            prepo.UpdateProduct(updatedprod);
+
+            Assert.AreNotEqual(3.89m, prepo.GetProductById(1).Price);
+            Assert.AreEqual(2.22m, prepo.GetProductById(1).Price);
+            Assert.AreEqual("updated", prepo.GetProductById(1).Description);
+
+
+        }
+
         
     }
 }
