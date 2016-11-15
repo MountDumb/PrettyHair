@@ -18,6 +18,12 @@ namespace PrettyHair.Lib
             _productCol = new List<Product>();
         }
 
+        #region Methods
+
+        public void AddProduct(IProduct ip)
+        {
+            _productCol.Add(new Product(ip.ProductId, ip.Price, ip.Description));
+        }
         public IList<Product> GetProducts()
         {
             return _productCol;
@@ -27,20 +33,20 @@ namespace PrettyHair.Lib
         {
             return _productCol.Find(x => x.ProductId == id);
         } 
+               
 
-       
-
+        public void UpdateProduct(IProduct p)
+        {
+            Product mutablep = _productCol.Find(x => x.ProductId == p.ProductId);
+            mutablep.Price = p.Price;
+            mutablep.Description = p.Description;
+            //int i = _productCol.FindIndex(x => x.ProductId == p.ProductId);
+            //_productCol[i] = (Product)p;
+        }
         public void DeleteProductById(int id)
         {
             _productCol.Remove(_productCol.Find(x => x.ProductId == id));
         }
-
-        public void UpdateProduct(Product p)
-        {
-            //productCol.Find(x => x.ProductId == p.ProductId).Price = p.Price;
-            //_productCol.Find(x => x.ProductId == p.ProductId).Description = p.Description;
-            int i = _productCol.FindIndex(x => x.ProductId == p.ProductId);
-            _productCol[i] = p;
-        }
-   }
+        #endregion
+    }
 }

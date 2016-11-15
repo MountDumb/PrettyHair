@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Lib
 {
-    public class Product
+    public class Product : IProduct
     {
         #region Fields
         private int _productId;
