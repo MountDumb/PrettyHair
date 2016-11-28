@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Lib
 {
-    public class ProductRepo
+    public abstract class ProductRepo
     {
         #region Fields
         
@@ -20,13 +20,11 @@ namespace PrettyHair.Lib
 
         #region Methods
 
-        public void AddProduct(IProduct ip)
-        {
-            _productCol.Add(new Product(ip.ProductId, ip.Price, ip.Description));
-        }
+        public abstract void AddProduct(IProduct ip);
+
         public IList<Product> GetProducts()
         {
-            return _productCol;
+            return new List<Product>(_productCol);
         }
 
         public Product GetProductById(int id)

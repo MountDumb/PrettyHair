@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyHair.Lib", "PrettyHai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyHair.Test", "PrettyHair.Test\PrettyHair.Test.csproj", "{871E6F5C-D796-46CE-B01D-BF9280142920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyHair.Orders", "PrettyHair.Orders\PrettyHair.Orders.csproj", "{197BF5FA-0BD6-4A01-8560-837B7E22D682}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{871E6F5C-D796-46CE-B01D-BF9280142920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871E6F5C-D796-46CE-B01D-BF9280142920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871E6F5C-D796-46CE-B01D-BF9280142920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197BF5FA-0BD6-4A01-8560-837B7E22D682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197BF5FA-0BD6-4A01-8560-837B7E22D682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197BF5FA-0BD6-4A01-8560-837B7E22D682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197BF5FA-0BD6-4A01-8560-837B7E22D682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

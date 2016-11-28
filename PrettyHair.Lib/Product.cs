@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Lib
 {
-    public class Product : IProduct
+    public abstract class Product 
     {
         #region Fields
         private int _productId;
@@ -32,6 +32,11 @@ namespace PrettyHair.Lib
         }
 
         #endregion
+
+        public Product()
+        {
+
+        }
         public Product(int productId, decimal price, string description)
         {
             _productId = productId;
