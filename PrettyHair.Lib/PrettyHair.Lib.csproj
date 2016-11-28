@@ -44,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IScissor.cs" />
     <Compile Include="ConcreteProducts\Scissor.cs" />
-    <Compile Include="IProduct.cs" />
+    <Compile Include="Interfaces\IProduct.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

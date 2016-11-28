@@ -8,8 +8,8 @@ namespace PrettyHair.Lib
 {
     public interface IProduct
     {
-        int ProductId { get; set; }
+        int ProductId { get; }
         decimal Price { get; set; }
         string Description { get; set; }
     }
-}
+} 

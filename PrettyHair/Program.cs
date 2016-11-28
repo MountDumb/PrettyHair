@@ -15,6 +15,8 @@ namespace PrettyHair
         {
             Program prog = new Program();
             prog.Run();
+            string test = DateTime.Now.ToString();
+            Console.WriteLine(test);
             Console.ReadLine();
 
         }
