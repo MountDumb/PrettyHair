@@ -11,5 +11,6 @@ namespace PrettyHair.Lib
         int ProductId { get; }
         decimal Price { get; set; }
         string Description { get; set; }
+        int Quantity { get; set; }
     }
 } 

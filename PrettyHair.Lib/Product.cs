@@ -25,11 +25,14 @@ namespace PrettyHair.Lib
             get { return _price; }
             set { _price = value; }
         }
+        
         public string Description
         {
             get { return _description; }
             set { _description = value; }
         }
+
+        public int Quantity { get; set; }
 
         #endregion
 
@@ -37,11 +40,12 @@ namespace PrettyHair.Lib
         {
 
         }
-        public Product(int productId, decimal price, string description)
+        public Product(int productId, decimal price, string description, int quantity)
         {
             _productId = productId;
             _price = price;
             _description = description;
+            Quantity = quantity;
         }
 
         #region

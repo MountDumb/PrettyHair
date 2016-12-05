@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Lib.ConcreteProducts
 {
-    public class Scissor : Product, IScissor
+    public class HairWax : Product, IHairWax
     {
         public int ProductTypeId { get; set; }
 
-        public Scissor()
+        public HairWax()
         {
 
         }
-        public Scissor(int productId, decimal price, string description, int productTypeId, int quantity) : base(productId, price, description, quantity)
+        public HairWax(int productId, decimal price, string description, int productTypeId, int quantity) : base(productId, price, description, quantity)
         {
             this.ProductTypeId = productTypeId;
         }
-      
-    }
 
-    
+    }
 }

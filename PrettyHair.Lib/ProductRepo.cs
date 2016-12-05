@@ -6,38 +6,49 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Lib
 {
-    public abstract class ProductRepo
+    public class ProductRepo
     {
         #region Fields
-        
-        private List<Product> _productCol;
+        //private ICollection<IProduct> _productCol;
+        private List<IProduct> _productCol;
         #endregion
 
         public ProductRepo()
         {
-            _productCol = new List<Product>();
+            _productCol = new List<IProduct>();
         }
 
         #region Methods
 
-        public abstract void AddProduct(IProduct ip);
-
-        public IList<Product> GetProducts()
+        public void AddProduct(IProduct ip)
         {
-            return new List<Product>(_productCol);
+            _productCol.Add(ip);
         }
 
-        public Product GetProductById(int id)
+        public IList<IProduct> GetProducts()
         {
-            return _productCol.Find(x => x.ProductId == id);
+            return new List<IProduct>(_productCol);
+        }
+
+        public IProduct GetProductById(int id)
+        {
+            if (_productCol.Exists(x => x.ProductId == id))
+            {
+                return _productCol.Find(x => x.ProductId == id);
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
         } 
                
 
         public void UpdateProduct(IProduct p)
         {
-            Product mutablep = _productCol.Find(x => x.ProductId == p.ProductId);
+            IProduct mutablep = _productCol.Find(x => x.ProductId == p.ProductId);
             mutablep.Price = p.Price;
             mutablep.Description = p.Description;
+            mutablep.Quantity = p.Quantity;
             //int i = _productCol.FindIndex(x => x.ProductId == p.ProductId);
             //_productCol[i] = (Product)p;
         }
