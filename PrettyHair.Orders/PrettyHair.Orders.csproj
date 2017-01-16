@@ -44,6 +44,12 @@
     <Compile Include="OrderLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrettyHair.Lib\PrettyHair.Lib.csproj">
+      <Project>{fe018b5e-7f73-494c-bc9d-d6f1fdb9c9c5}</Project>
+      <Name>PrettyHair.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

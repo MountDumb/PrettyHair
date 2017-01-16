@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace PrettyHair.Orders
 {
-    class Order
+    public class Order
     {
+        private List<OrderLine> _orderLines;
+        private DateTime _dateOfOrdering;
 
+        public Order()
+        {
+            _orderLines = new List<OrderLine>();
+            _dateOfOrdering = DateTime.Now;
+        }
     }
 }

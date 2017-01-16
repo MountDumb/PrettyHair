@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using PrettyHair.Lib.Interfaces;
 using PrettyHair.Lib;
 
 namespace PrettyHair

@@ -48,6 +48,7 @@
     <Compile Include="ConcreteProducts\HairWax.cs" />
     <Compile Include="Interfaces\IHairWax.cs" />
     <Compile Include="Interfaces\IComb.cs" />
+    <Compile Include="Interfaces\IOrderLine.cs" />
     <Compile Include="Interfaces\IScissor.cs" />
     <Compile Include="ConcreteProducts\Scissor.cs" />
     <Compile Include="Interfaces\IProduct.cs" />

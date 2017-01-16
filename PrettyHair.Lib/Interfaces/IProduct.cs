@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrettyHair.Lib
+namespace PrettyHair.Lib.Interfaces
 {
     public interface IProduct
     {

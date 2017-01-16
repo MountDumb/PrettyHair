@@ -1,4 +1,4 @@
-﻿namespace PrettyHair.Lib.ConcreteProducts
+﻿namespace PrettyHair.Lib.Interfaces
 {
     public interface IComb
     {
